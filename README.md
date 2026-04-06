@@ -177,7 +177,7 @@ class SegFormer(nn.Module):
 
 1. **Python 3.8+** with PyTorch ≥ 1.12
 2. **Cityscapes dataset** — requires registration at [cityscapes-dataset.com](https://www.cityscapes-dataset.com/)
-3. **Pretrained MiT-B1 weights** (ImageNet) — download from the [official Google Drive](https://drive.google.com/drive/folders/1b7bwrInTW4VLEm27YawHOAMSMikga2Ia)
+3. **Pretrained MiT-B1 weights** (ImageNet) — download from (https://github.com/anibali/segformer/releases/tag/v0.0.0)
 
 ### Dataset Setup (Cityscapes)
 
