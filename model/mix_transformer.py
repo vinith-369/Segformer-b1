@@ -1,12 +1,3 @@
-# ---------------------------------------------------------------
-# Copyright (c) 2021, NVIDIA Corporation. All rights reserved.
-#
-# This work is licensed under the NVIDIA Source Code License
-# ---------------------------------------------------------------
-# Adapted from the official NVlabs/SegFormer implementation.
-# Removed mmseg/mmcv dependencies for standalone PyTorch usage.
-# ---------------------------------------------------------------
-
 import math
 import torch
 import torch.nn as nn
