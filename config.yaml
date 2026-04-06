@@ -1,0 +1,43 @@
+exp:
+  backbone: mit_b1
+  embedding_dim: 256
+  pretrained: true
+  # Path to pretrained MiT-B1 encoder weights (ImageNet)
+  # Download from: https://drive.google.com/drive/folders/1b7bwrInTW4VLEm27YawHOAMSMikga2Ia
+  pretrained_path: pretrained/mit_b1.pth
+
+dataset:
+  name: cityscapes
+  root_dir: /Users/vinithlankireddy/Projects/LLMs/SegFormer2.0/segformer-pytorch-main/data/cityscapes
+  num_classes: 19
+  crop_size: 1024
+  resize_range: [512, 2048]
+  rescale_range: [0.5, 2.0]
+  ignore_index: 255
+
+train:
+  split: train
+  batch_size: 2
+  max_iters: 160000
+  eval_iters: 10000
+  log_iters: 50
+  save_iters: 10000
+  seed: 42
+
+val:
+  split: val
+
+optimizer:
+  type: AdamW
+  learning_rate: 6e-5
+  betas: [0.9, 0.999]
+  weight_decay: 0.01
+
+scheduler:
+  warmup_iter: 1500
+  warmup_ratio: 1e-6
+  power: 1.0
+
+logging:
+  log_dir: logs
+  checkpoint_dir: checkpoints
