@@ -1,11 +1,3 @@
-# ---------------------------------------------------------------
-# Copyright (c) 2021, NVIDIA Corporation. All rights reserved.
-#
-# This work is licensed under the NVIDIA Source Code License
-# ---------------------------------------------------------------
-# SegFormer all-MLP decoder head.
-# Reimplemented in pure PyTorch (no mmcv ConvModule dependency).
-# ---------------------------------------------------------------
 
 import torch
 import torch.nn as nn
