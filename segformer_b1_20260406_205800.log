@@ -1,0 +1,48 @@
+2026-04-06 20:58:00 | INFO | Logging to: logs\segformer_b1_20260406_205800.log
+2026-04-06 20:58:01 | INFO | ======================================================================
+2026-04-06 20:58:01 | INFO | SegFormer-B1 Cityscapes Training
+2026-04-06 20:58:01 | INFO | ======================================================================
+2026-04-06 20:58:01 | INFO | Device: cuda | DDP: False
+2026-04-06 20:58:01 | INFO | Config:
+exp:
+  backbone: mit_b1
+  embedding_dim: 256
+  pretrained: true
+  pretrained_path: C:/Users/Lankireddy-stu/Downloads/Segformer/pretrained/mit_b1.pth
+dataset:
+  name: cityscapes
+  root_dir: C:/Users/Lankireddy-stu/Downloads/Segformer/Dataset
+  num_classes: 19
+  crop_size: 1024
+  resize_range:
+  - 512
+  - 2048
+  rescale_range:
+  - 0.5
+  - 2.0
+  ignore_index: 255
+train:
+  split: train
+  batch_size: 2
+  max_iters: 160000
+  eval_iters: 10000
+  log_iters: 50
+  save_iters: 10000
+  seed: 42
+val:
+  split: val
+optimizer:
+  type: AdamW
+  learning_rate: 6.0e-05
+  betas:
+  - 0.9
+  - 0.999
+  weight_decay: 0.01
+scheduler:
+  warmup_iter: 1500
+  warmup_ratio: 1.0e-06
+  power: 1.0
+logging:
+  log_dir: logs
+  checkpoint_dir: checkpoints
+
